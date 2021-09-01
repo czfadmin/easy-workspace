@@ -1,0 +1,24 @@
+{
+  "name": "easy-workspace",
+  "version": "1.0.0",
+  "description": "easy workspace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "workspace"
+  ],
+  "author": "abchen",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^8.1.0",
+    "minimist": "^1.2.5",
+    "prompts": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.2",
+    "@types/prompts": "^2.0.14",
+    "kolorist": "^1.5.0"
+  }
+}
