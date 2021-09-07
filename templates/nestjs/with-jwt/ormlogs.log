@@ -1,0 +1,83 @@
+[2021-09-07T12:22:32.673Z][QUERY]: BEGIN TRANSACTION
+[2021-09-07T12:22:32.679Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" = 'typeorm_metadata'
+[2021-09-07T12:22:32.684Z][QUERY]: COMMIT
+[2021-09-07T12:23:13.411Z][QUERY]: BEGIN TRANSACTION
+[2021-09-07T12:23:13.416Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" IN ('user')
+[2021-09-07T12:23:13.419Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" = 'typeorm_metadata'
+[2021-09-07T12:23:13.421Z][QUERY]: CREATE TABLE "user" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar NOT NULL, "password" varchar NOT NULL, "phonenumber" varchar NOT NULL DEFAULT (''), "email" varchar NOT NULL, "isActive" boolean NOT NULL DEFAULT (1), "isAdmin" boolean NOT NULL DEFAULT (0), "bio" varchar NOT NULL DEFAULT (''))
+[2021-09-07T12:23:13.424Z][QUERY]: COMMIT
+[2021-09-07T12:26:03.475Z][QUERY]: BEGIN TRANSACTION
+[2021-09-07T12:26:03.479Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" IN ('user')
+[2021-09-07T12:26:03.482Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'index' AND "tbl_name" IN ('user')
+[2021-09-07T12:26:03.482Z][QUERY]: PRAGMA table_info("user")
+[2021-09-07T12:26:03.483Z][QUERY]: PRAGMA index_list("user")
+[2021-09-07T12:26:03.483Z][QUERY]: PRAGMA foreign_key_list("user")
+[2021-09-07T12:26:03.484Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" = 'typeorm_metadata'
+[2021-09-07T12:26:03.486Z][QUERY]: COMMIT
+[2021-09-07T12:27:05.858Z][QUERY]: BEGIN TRANSACTION
+[2021-09-07T12:27:05.863Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" IN ('user')
+[2021-09-07T12:27:05.864Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'index' AND "tbl_name" IN ('user')
+[2021-09-07T12:27:05.865Z][QUERY]: PRAGMA table_info("user")
+[2021-09-07T12:27:05.865Z][QUERY]: PRAGMA index_list("user")
+[2021-09-07T12:27:05.865Z][QUERY]: PRAGMA foreign_key_list("user")
+[2021-09-07T12:27:05.866Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" = 'typeorm_metadata'
+[2021-09-07T12:27:05.869Z][QUERY]: COMMIT
+[2021-09-07T12:27:29.503Z][QUERY]: BEGIN TRANSACTION
+[2021-09-07T12:27:29.507Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" IN ('user')
+[2021-09-07T12:27:29.509Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'index' AND "tbl_name" IN ('user')
+[2021-09-07T12:27:29.509Z][QUERY]: PRAGMA table_info("user")
+[2021-09-07T12:27:29.510Z][QUERY]: PRAGMA index_list("user")
+[2021-09-07T12:27:29.510Z][QUERY]: PRAGMA foreign_key_list("user")
+[2021-09-07T12:27:29.511Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" = 'typeorm_metadata'
+[2021-09-07T12:27:29.513Z][QUERY]: COMMIT
+[2021-09-07T12:27:32.882Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T12:27:58.274Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:02:12.659Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:02:12.662Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."email" = ? LIMIT 1 -- PARAMETERS: ["test@test.com"]
+[2021-09-07T13:02:12.742Z][QUERY]: BEGIN TRANSACTION
+[2021-09-07T13:02:12.746Z][QUERY]: INSERT INTO "user"("id", "username", "password", "phonenumber", "email", "isActive", "isAdmin", "bio") VALUES (NULL, ?, ?, '', ?, 1, 0, '') -- PARAMETERS: ["test","$2b$10$o88n967WBYWroJUHg4rDbOjCHsh6TxhCcdt2QmO/fIB/cvMiMwzZW","test@test.com"]
+[2021-09-07T13:02:12.749Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."phonenumber" AS "User_phonenumber", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."id" = ? -- PARAMETERS: [1]
+[2021-09-07T13:02:12.750Z][QUERY]: COMMIT
+[2021-09-07T13:03:41.613Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:04:28.760Z][QUERY]: BEGIN TRANSACTION
+[2021-09-07T13:04:28.777Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" IN ('user')
+[2021-09-07T13:04:28.781Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'index' AND "tbl_name" IN ('user')
+[2021-09-07T13:04:28.784Z][QUERY]: PRAGMA table_info("user")
+[2021-09-07T13:04:28.784Z][QUERY]: PRAGMA index_list("user")
+[2021-09-07T13:04:28.784Z][QUERY]: PRAGMA foreign_key_list("user")
+[2021-09-07T13:04:28.786Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" = 'typeorm_metadata'
+[2021-09-07T13:04:28.790Z][QUERY]: COMMIT
+[2021-09-07T13:04:30.888Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:05:07.584Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:05:42.331Z][QUERY]: BEGIN TRANSACTION
+[2021-09-07T13:05:42.337Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" IN ('user')
+[2021-09-07T13:05:42.339Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'index' AND "tbl_name" IN ('user')
+[2021-09-07T13:05:42.339Z][QUERY]: PRAGMA table_info("user")
+[2021-09-07T13:05:42.340Z][QUERY]: PRAGMA index_list("user")
+[2021-09-07T13:05:42.340Z][QUERY]: PRAGMA foreign_key_list("user")
+[2021-09-07T13:05:42.341Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" = 'typeorm_metadata'
+[2021-09-07T13:05:42.343Z][QUERY]: COMMIT
+[2021-09-07T13:06:19.525Z][QUERY]: BEGIN TRANSACTION
+[2021-09-07T13:06:19.533Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" IN ('user')
+[2021-09-07T13:06:19.535Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'index' AND "tbl_name" IN ('user')
+[2021-09-07T13:06:19.536Z][QUERY]: PRAGMA table_info("user")
+[2021-09-07T13:06:19.536Z][QUERY]: PRAGMA index_list("user")
+[2021-09-07T13:06:19.536Z][QUERY]: PRAGMA foreign_key_list("user")
+[2021-09-07T13:06:19.537Z][QUERY]: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" = 'typeorm_metadata'
+[2021-09-07T13:06:19.540Z][QUERY]: COMMIT
+[2021-09-07T13:06:21.074Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:06:48.707Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:07:15.665Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:07:23.329Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:14:40.768Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:15:28.536Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:16:18.340Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:17:11.084Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:17:30.160Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:18:09.920Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:18:23.448Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:18:41.171Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:19:33.050Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:20:15.457Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:23:23.574Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
+[2021-09-07T13:50:37.774Z][QUERY]: SELECT "User"."id" AS "User_id", "User"."username" AS "User_username", "User"."password" AS "User_password", "User"."phonenumber" AS "User_phonenumber", "User"."email" AS "User_email", "User"."isActive" AS "User_isActive", "User"."isAdmin" AS "User_isAdmin", "User"."bio" AS "User_bio" FROM "user" "User" WHERE "User"."username" = ? LIMIT 1 -- PARAMETERS: ["test"]
